@@ -1,0 +1,84 @@
+:root{
+    --bgColor: rgb(5,5,5);
+    --bg2Color: rgb(25,25,25);
+    --fntAColor: rgba(14, 238, 44, 0.822);
+    --fntBColor: rgba(14, 230, 238, 0.822);
+    --fntCColor: rgba(253, 0, 63, 0.822);
+    --btnColor: linear-gradient(#fcfcfc 95%, #006effe3);
+}
+@font-face {
+    font-family: "Evil";
+    src: url(../font/evil.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body, input[type=text], input[type=password]{
+    background-color: var(--bgColor);
+    color: var(--fntBColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-title{
+    color: white;
+}
+.container{
+    width: 35%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 8rem;
+}
+form{
+    background-color: var(--bg2Color);
+    padding: 3.5rem;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputText:hover, .inputPass:hover, .inputBtn:hover{
+    background-color: rgb(10,10,10);
+    border: white solid 1px !important;
+}
+
+.inputText, .inputPass, .inputBtn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: var(--fntCColor) solid 1px;
+}
+
+.inputBtn{
+    width: 100%;
+    background: var(--btnColor);
+    cursor: pointer;
+    border: white solid 1px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--fntCColor);
+}
+
+.logo-title{
+    font-family: Evil;
+    font-size: 8rem;
+    color: var(--fntCColor);
+}
+
+@media (max-width: 490px){
+    .container{
+        margin-top: 2rem;
+    }
+}
